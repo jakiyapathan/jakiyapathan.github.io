@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Notes & Videos</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .icon {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        div[id^="download"] {
+            display: none;
+        }
+
+        .bg-img {
+          /* The image used */
+                background-image: url(background-image.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                height: 100vh;
+        }
+
+    </style>
+</head>
+
+<body>
+
+	
+	<div style="position: absolute; top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;font-family: cursive;font-size: xxx-large;">
+	
+	</div>
+    <div class="bg-img container-fluid" style="padding-top: 30px;">
+        <h2 style="text-align: center"><b>Quick referance of notes</b></h2>
+        <div class="row">
+            <div class="center-block" style="width: 409px;background-color: white; padding: 1rem 3rem;">
+                <form class="form-horizontal">
+                    <fieldset>
+
+                        <!-- Add semester here --<option>9</option> -->
+                        <div class="form-group">
+                            <label for="semesterBox">Select semester</label>
+                            <select class="form-control" id="semesterBox">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+
+                             <!-- Add Branch here --<option>CIVIL</option> -->
+                            <label for="selectBranch">Select Branch</label>
+							<select class="form-control" id="selectBranch">
+                                <option default>Please select branch</option>
+                                <option>First Year Engg</option>
+                                <option>Computer</option>
+                                <option>Civil</option>
+                                <option>IT</option>
+                                <option>Mechanical</option>
+								<option>Electrical</option>
+                                <option>EnTC</option>
+                            </select>
+                        </div>
+						
+						<div class="form-group">
+
+                            <!-- Add Subject here --<option>MATHS</option> -->
+                            <label for="selectSubject">Select Subject</label>
+							<select class="form-control" id="selectSubject">
+                                 <option default>Please select Subject</option>
+                            </select>
+                        </div>
+						
+						<div class="form-group">
+                            <label for="selectedResource">Select resource type</label>
+							<select class="form-control" id="selectedResource">
+                                 <option default>Please select Resource type</option>
+                                <option>Youtube Videos</option>
+                                <option>Notes</option>
+                                <option>NPTEL Videos</option>
+                                <option>Question Papers</option>
+                            </select>
+                        </div>
+
+
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="submitButton"></label>
+                            <div class="col-md-4">
+                                <button id="submitButton" name="submitButton" class="btn btn-primary">Submit</button>
+                              <!--   <button id="reload" name="reload" class="btn btn-default">Clear</button>
+ -->                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+				<div id="result">
+				</div>
+				<div id="noResult" style="width:100%; display:flex; color:red">
+					<p>No result found</p>
+				</div>
+                <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                <!-- Include all compiled plugins (below), or include individual files as needed -->
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+                    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+                    crossorigin="anonymous"></script>
+					<script type="text/javascript">
+
+					var data = [
+                    {
+                    "semester": 3,
+                    "branch": "Computer",
+                    "subject": "Fundamentals of Data Structures",
+                    "resourceType": "Youtube Videos",
+                    "resource": [
+                      {
+                        "name": "Data structures and algorithms",
+                        "url": "https://youtube.com/playlist?list=PLUhebcqFf6aHYUojqYufy5eXxLXVF6LyE",
+                      },
+                      {
+                        "name": "Searching in data structures",
+                        "url": "https://youtube.com/playlist?list=PLqleLpAMfxGDyeIeas8D1zZ0xB5HD--Lh",
+                      },
+                      {
+                        "name": "Sorting in data structures",
+                        "url": "https://youtube.com/playlist?list=PLqleLpAMfxGCil0s21Y8kzUyPGrE0L0fi",
+                      }
+                    ]
+                  },
+                  {
+                    "semester": 3,
+                    "branch": "Computer",
+                    "subject": "Fundamentals of Data Structures",
+                    "resourceType": "NPTEL Videos",
+                    "resource": [
+                  {
+                    "name": "Introduction to Data Structures",
+                    "url": "https://nptel.ac.in/courses/106/102/106102064/",
+                  },
+                  {
+                    "name" : "Programming and Data Structures",
+                    "url": "https://nptel.ac.in/courses/106/105/106105085/",
+                  }
+                  ]},
+                  {
+                    "semester": 3,
+                    "branch": "Computer",
+                    "subject": "Fundamentals of Data Structures",
+                    "resourceType": "Question Papers",
+                    "resource": [
+                      {
+                        "name": "question paper 1",
+                        "url": "qp1.pdf",
+                    },
+                    {
+                        "name": "question paper 2",
+                        "url": "qp2.pdf",
+                    },
+                    {
+                        "name": "question paper 3",
+                        "url": "qp3.pdf",
+                    },
+                    {
+                        "name": "question paper 4",
+                        "url": "q4.pdf",
+                    }
+                    ]},
+                  {
+                    "semester": 3,
+                    "branch": "Computer",
+                    "subject": "Fundamentals of Data Structures",
+                    "resourceType": "Notes",
+                    "resource": [
+                      {
+                        "name": "Data Structures Notes",
+                        "url": "Data Structures Notes 1.pdf",
+                        
+                      }
+                    ]
+                  }
+                ]
+					
+					</script>
+					
+                <script type="text/javascript">
+                    var selectedSemester = $("#semesterBox").val();; 
+					var selectedBranch = $("#selectBranch").val();
+					var selectedSubject = $("#selectSubject").val();;
+					var selectResource = $("#selectedResource").val();
+
+                    $("#noResult").hide();
+                    
+                    // Semester
+                     $("#semesterBox").on('change', function () {
+                            selectedSemester = $(this).val();
+                            selectSubject(selectedBranch);
+                    });
+
+                     // Branch
+					$("#selectBranch").on('change', function () {
+						selectSubject($(this).val());
+					});
+
+                    function selectSubject(value){
+                        selectedBranch = value;
+                        let arr = data.filter(x=> x.branch == selectedBranch && x.semester == parseInt(selectedSemester) );
+                        array=[];
+                        for (var i = 0; i <= arr.length && arr.length>0; i++) {
+                            let index = array.findIndex(x=> x.subject == arr[i].subject)
+                            if(index==-1){
+                             $('#selectSubject').append('<option value="'+arr[i].subject+'">'+ arr[i].subject+'</option>');
+                             array.push(arr[i]);  
+                            }
+                            
+                        }
+                    }
+                    // Subject
+					$("#selectSubject").on('change', function () {
+						selectedSubject = $(this).val();
+
+					});
+
+                    // Resources
+					$('#selectedResource').on('change', function () {
+						selectResource = $(this).val();
+						console.log(selectResource)
+					})
+                    $("#reload").hide();
+                    $('#reload').click(function (e) {
+                       window.location.reload();
+                    })
+                    $('#submitButton').click(function (e) {
+                        $("#result").hide();
+                        $("#result").html("");
+                        $("#noResult").hide();
+                       const resultHeading = '<div style="display: flex; justify-content: center; width: 100%;font-family: cursive;font-size: xxx-large;"><h2 >Results:</h2></div>'
+                        $(this).prop('disabled', true);
+                        e.preventDefault();
+
+						var filteredData = data.filter(e => e.resourceType === selectResource && e.subject === selectedSubject && e.branch === selectedBranch && e.semester === parseInt(selectedSemester, 10));
+						console.log(filteredData);
+						if(!filteredData || filteredData.length === 0) {
+							$("#noResult").show();
+						} else {
+							const elements = filteredData.map(e => '<ol>' + e.resource.map(e => '<li><a target="_blank" href="' + e.url + '">' + e.name + '</a></li>') + '</ol>')
+							$("#result").show();
+                            elements.forEach(x=>x.replace(",", ""));
+							$("#result").html(resultHeading + elements);
+							location.href = "#result";
+						}
+                        $(this).prop('disabled', false);
+                        // $("#submitButton").hide();
+                        // $("#reload").show();
+                       
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
